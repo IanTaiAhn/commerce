@@ -9,6 +9,7 @@
 
 <template>
     <div class="grid grid-col sm:grid sm:grid-cols-3 justify-items-center border border-black p-2 space-y-4">
+        <!-- Instead of creating product items individually, figure out how to loop through them in accoradance to the api calls. -->
         <ProductItem class="mt-4">
             <template #image>
                 <TheImage/>
