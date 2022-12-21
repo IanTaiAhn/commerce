@@ -4,6 +4,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
   <main>
-    <TheWelcome class="mx-auto container" />
+    <!-- <TheWelcome class="mx-auto container" /> -->
+    <h1>Home page</h1>
   </main>
 </template>
