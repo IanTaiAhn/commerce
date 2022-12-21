@@ -11,6 +11,8 @@
     "watch": "npx tailwindcss -i ./assets/main.css -o ./dist/output.css --watch"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
