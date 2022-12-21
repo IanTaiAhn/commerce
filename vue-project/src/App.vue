@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import TheNavbar from './components/TheNavbar.vue';
+import TheProduct from './components/TheProduct.vue';
 </script>
 
 <template>
@@ -9,16 +10,14 @@ import TheNavbar from './components/TheNavbar.vue';
     <TheNavbar/>
     <div class="mx-auto container">
       <!-- <HelloWorld msg="You did it!" /> -->
-
-      <nav>
+      <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-      </nav>
-      
+      </nav> -->
     </div>
   </header>
-
-  <RouterView />
+  <TheProduct/>
+  <!-- <RouterView /> -->
 </template>
 
 <!-- <style scoped>
