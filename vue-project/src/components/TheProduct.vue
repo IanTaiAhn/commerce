@@ -32,11 +32,13 @@ export default {
 <script setup>
     import ProductItem from './ProductItem.vue';
     import TheImage from './TheImage.vue';
-    let testString = "hooby";
 </script>
 
 <template>
     <div class="grid grid-col sm:grid sm:grid-cols-3 justify-items-center border border-black p-2 space-y-4">
+        <!-- Ideally I loop through the product items, and we only fetch data here. -->
+        <!-- That is the next step. We need to loop through the array of objects, and populate each ProductItem. -->
+        <!-- Mess around with the v-for... similary to how Angular works I'm pretty sure. -->
         <ProductItem class="mt-4" :childImg="imgURL">
             <template #title>{{ title }}</template>
             <template #price>${{ price }}</template>
@@ -45,8 +47,5 @@ export default {
         <ProductItem/>
         <ProductItem/>
         <ProductItem/>
-        <!-- <img src={{ img }} alt=""> -->
-        <!-- Ideally I loop through the product items, and we only fetch data here. -->
-        <!-- <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt=""> -->
     </div>
 </template>
