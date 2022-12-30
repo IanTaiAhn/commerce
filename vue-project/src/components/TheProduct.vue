@@ -22,7 +22,7 @@ export default {
                 this.title = json.title;
                 this.price = json.price;
                 this.imgURL = json.image;
-                console.log(this.imgURL);
+                // console.log(this.imgURL);
             }))
 
     fetch('https://fakestoreapi.com/products')
@@ -45,15 +45,20 @@ export default {
         <!-- Ideally I loop through the product items, and we only fetch data here. -->
         <!-- That is the next step. We need to loop through the array of objects, and populate each ProductItem. -->
         <!-- Mess around with the v-for... similary to how Angular works I'm pretty sure. -->
-        <ProductItem class="mt-4" :childImg="imgURL">
+
+        <!-- <ProductItem class="mt-4" :childImg="imgURL">
             <template #title>{{ title }}</template>
             <template #price>${{ price }}</template>
-        </ProductItem>
+        </ProductItem> -->
 
         <ProductItem/>
         <ProductItem/>
         
         <ProductItem v-for="el in productArr">
+          <template #image>
+            <!-- {{ el.image }} -->
+            <img src="el.image"/>
+          </template>
           <template #title>{{ el.title }}</template>
           <template #price>${{ el.price }}</template>
         </ProductItem>
