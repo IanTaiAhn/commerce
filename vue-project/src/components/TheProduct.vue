@@ -7,15 +7,14 @@ export default {
       titleArr: ["title1", "title2", "title3", "title4", "title5"],
       priceArr: ["price1", "price2", "price3", "price4", "price5"],
       imgURL: "",
-      img: {}
+      img: {},
+      productArr: []
     }
   },
   // `mounted` is a lifecycle hook which we will explain later
   mounted() {
-    // fetch('https://fakestoreapi.com/products/1')
-    //         .then((res=>{
-    //             res
-    //         }))
+    // Implement a loading screen while the api call is processing.
+
     fetch('https://fakestoreapi.com/products/1')
             .then(res=>res.json())
             .then((json=> {
@@ -25,6 +24,13 @@ export default {
                 this.imgURL = json.image;
                 console.log(this.imgURL);
             }))
+
+    fetch('https://fakestoreapi.com/products')
+    .then(res=>res.json())
+    .then((json=> {
+        console.log(json);
+        this.productArr = json;
+    }))
   }
 
 }
@@ -43,9 +49,13 @@ export default {
             <template #title>{{ title }}</template>
             <template #price>${{ price }}</template>
         </ProductItem>
+
         <ProductItem/>
         <ProductItem/>
-        <ProductItem/>
-        <ProductItem/>
+        
+        <ProductItem v-for="el in productArr">
+          <template #title>{{ el.title }}</template>
+          <template #price>${{ el.price }}</template>
+        </ProductItem>
     </div>
 </template>
