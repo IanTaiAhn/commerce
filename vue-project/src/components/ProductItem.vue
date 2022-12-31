@@ -10,8 +10,8 @@
 <template>
     <div class="w-80 h-96 border border-black p-2">
         <div class="flex flex-col justify-between h-full p-2">
-            <div class="p-2 w-9/12 self-center">
-                <slot name="image">
+            <div class="p-2 max-h-64">
+                <slot class="" name="image">
                     <!-- <img :src=childImg alt="null" class="">  -->
                     <!-- <img src="null"/> -->
                 </slot>

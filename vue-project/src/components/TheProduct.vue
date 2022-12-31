@@ -15,7 +15,7 @@ export default {
   mounted() {
     // Implement a loading screen while the api call is processing.
 
-    fetch('https://fakestoreapi.com/products/1')
+    fetch('https://fakestoreapi.com/products/2')
             .then(res=>res.json())
             .then((json=> {
                 console.log(json);
@@ -50,13 +50,9 @@ export default {
             <template #title>{{ title }}</template>
             <template #price>${{ price }}</template>
         </ProductItem> -->
-
-        <ProductItem/>
-        <ProductItem/>
-        
         <ProductItem v-for="el in productArr">
           <template #image>
-            <img :src="el.image"/>
+            <img class=" max-w-full max-h-full" :src="el.image"/>
           </template>
           <template #title>{{ el.title }}</template>
           <template #price>${{ el.price }}</template>
