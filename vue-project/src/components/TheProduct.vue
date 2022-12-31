@@ -56,8 +56,7 @@ export default {
         
         <ProductItem v-for="el in productArr">
           <template #image>
-            <!-- {{ el.image }} -->
-            <img src="el.image"/>
+            <img :src="el.image"/>
           </template>
           <template #title>{{ el.title }}</template>
           <template #price>${{ el.price }}</template>
