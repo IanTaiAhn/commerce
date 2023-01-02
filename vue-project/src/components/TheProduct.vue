@@ -41,15 +41,7 @@ export default {
 </script>
 
 <template>
-    <div class="grid grid-col sm:grid sm:grid-cols-3 justify-items-center border border-black p-2 space-y-4">
-        <!-- Ideally I loop through the product items, and we only fetch data here. -->
-        <!-- That is the next step. We need to loop through the array of objects, and populate each ProductItem. -->
-        <!-- Mess around with the v-for... similary to how Angular works I'm pretty sure. -->
-
-        <!-- <ProductItem class="mt-4" :childImg="imgURL">
-            <template #title>{{ title }}</template>
-            <template #price>${{ price }}</template>
-        </ProductItem> -->
+    <div class="grid grid-col lg:grid lg:grid-cols-3 justify-items-center border border-black p-2 gap-4 -m-1">
         <ProductItem v-for="el in productArr">
           <template #image>
             <img class="max-w-full max-h-full" :src="el.image"/>
