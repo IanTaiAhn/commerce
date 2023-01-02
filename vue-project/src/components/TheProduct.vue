@@ -52,7 +52,7 @@ export default {
         </ProductItem> -->
         <ProductItem v-for="el in productArr">
           <template #image>
-            <img class=" max-w-full max-h-full" :src="el.image"/>
+            <img class="max-w-full max-h-full" :src="el.image"/>
           </template>
           <template #title>{{ el.title }}</template>
           <template #price>${{ el.price }}</template>
