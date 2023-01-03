@@ -1,10 +1,13 @@
 <script setup>
+console.log("in ProductItem")
+
+
 </script>
 
 <template>
-    <div class="w-80 h-96 border border-black p-2 relative">
-        <div class="flex flex-col justify-center gap-y-8 h-full p-2">
-            <div class="p-2 max-h-64 flex justify-center">
+    <div class="sm:w-[520px] sm:h-[700px] w-[280px] h-[420px] border border-black p-2 relative hover:cursor-pointer">
+        <div class="flex flex-col justify-center gap-y-2 h-full p-2">
+            <div class="p-2 max-w-full sm:max-h-[500px] max-h-[300px] flex justify-center">
                 <slot class="" name="image"></slot>
             </div>
         </div>

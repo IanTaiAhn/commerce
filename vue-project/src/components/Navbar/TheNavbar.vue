@@ -4,15 +4,15 @@
 </script>
 
 <template>
-    <nav class="relative border border-black p-2">
-        <div class="flex items-center justify-between">
+    <nav class="w-screen border border-black">
+        <div class="flex items-center justify-between p-2">
             <div class="pt-2">
             <!-- <img src="img/logo.svg" alt="" /> Perhaps I'll find a logo, or make one --> 
                 <h1 class="font-bold text-4xl p-2 rounded-full">
                 <RouterLink to="/" class="hover:text-gray-400 group relative">Landing Page</RouterLink>
                 </h1>
             </div>
-            <div id="menuItems" class="hidden space-x-6 text-lg md:flex">
+            <div id="menuItems" class="hidden space-x-6 text-lg md:flex pr-4">
                 <NavbarItem route="product" msg="Shop"/>
                 <NavbarItem route="about" msg="About"/>
                 <NavbarItem route="art" msg="Art"/>

@@ -3,7 +3,7 @@ import TheProduct from '../components/Product/TheProduct.vue';
 </script>
 
 <template>
-  <main>
+  <main class=" border border-black ">
     <TheProduct/>    
   </main>
 </template>

@@ -4,7 +4,7 @@ import TheProduct from './components/Product/TheProduct.vue';
 </script>
 
 <template>
-  <header class="container mx-auto">
+  <header class="">
     <TheNavbar/>
   </header>
   

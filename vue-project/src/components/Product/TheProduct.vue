@@ -10,7 +10,7 @@ export default {
     fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
     .then((json=> {
-        console.log(json);
+        // console.log(json);
         this.productArr = json;
     }))
   }
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-    <div class="grid grid-col lg:grid lg:grid-cols-3 justify-items-center border border-black p-2 gap-4 -m-1 mt-4">
+    <div class="grid grid-col 2xl:grid 2xl:grid-cols-3 justify-items-center p-2 gap-4 mt-4 w-full">
         <ProductItem v-for="el in productArr" :key="el.id">
           <template #image>
             <img class="max-w-full max-h-full" :src="el.image"/>
