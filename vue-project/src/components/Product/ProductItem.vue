@@ -1,10 +1,4 @@
 <script setup>
-// defineProps({
-//   childImg: {
-//     type: String,
-//     required: true
-//   }
-// })
 </script>
 
 <template>

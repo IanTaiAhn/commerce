@@ -1,30 +1,21 @@
 <script setup>
     import NavbarItem from './NavbarItem.vue';
-
-//     document.getElementById("menu").addEventListener("click", (e) => {
-//   e.target.nextElementSibling.classList.toggle("translate-x-full");
-//   e.target.nextElementSibling.classList.add("min-w-full");
-//   e.target.nextElementSibling.classList.add("ease-out");
-// });
-// console.log("test");
+    import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <nav class="relative container mx-auto p-2">
-        <!-- Flex container -->
+    <nav class="relative border border-black p-2">
         <div class="flex items-center justify-between">
-          <!-- Logo -->
             <div class="pt-2">
             <!-- <img src="img/logo.svg" alt="" /> Perhaps I'll find a logo, or make one --> 
-                <h1 class="font-bold text-5xl p-2 rounded-full">
-                <a href="home" class="hover:text-gray-400 group relative">Coastal</a>
+                <h1 class="font-bold text-4xl p-2 rounded-full">
+                <RouterLink to="/" class="hover:text-gray-400 group relative">Landing Page</RouterLink>
                 </h1>
             </div>
-            <!-- Menu Items -->
             <div id="menuItems" class="hidden space-x-6 text-lg md:flex">
-                <NavbarItem route="shop" msg="Shop"/>
-                <NavbarItem route="about" msg="About Us"/>
-                <NavbarItem route="login" msg="Login"/>
+                <NavbarItem route="product" msg="Shop"/>
+                <NavbarItem route="about" msg="About"/>
+                <NavbarItem route="art" msg="Art"/>
             </div>
   
             <!-- Hamburger Icon -->
@@ -43,4 +34,5 @@
 
         </div>
     </nav>
+    <RouterView/>
 </template>
