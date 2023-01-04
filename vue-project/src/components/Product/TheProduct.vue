@@ -30,14 +30,17 @@ export default {
 <template>
     <div class="grid grid-col 2xl:grid 2xl:grid-cols-3 justify-items-center p-2 gap-4 mt-4 w-full">
         <ProductItem 
-          v-for="el in productArr"
-          :key="el.id"
-          @someEvent="someEventParent"
+            v-for="el in productArr"
+            :key="el.id"
+            @someEvent="someEventParent"
         >
-          <template #image >
-            <img class="max-w-full max-h-full"
-            :src="el.image"
-          />
+          <template #image>
+            <img 
+                class="max-w-full max-h-full"
+                :src="el.image"
+                alt="not working"
+                style=""
+            >
           </template>
           <template #title>{{ el.title }}</template>
           <template #price>${{ el.price }}</template>

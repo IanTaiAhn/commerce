@@ -22,8 +22,14 @@
                     route="product"
                     msg="Shop"
                 />
-                <NavbarItem route="about" msg="About"/>
-                <NavbarItem route="art" msg="Art"/>
+                <NavbarItem
+                    route="about"
+                    msg="About"
+                />
+                <NavbarItem
+                    route="art"
+                    msg="Art"
+                />
             </div>
   
             <!-- Hamburger Icon -->
@@ -33,9 +39,18 @@
                 <!-- <font-awesome-icon icon="fa-solid fa-bars" id="menu"/> -->
                 <div class="container flex justify-center fixed top-20 -left-full w-0 h-screen transition-all ease-in duration-300 bg-pink-400 z-10">
                     <div class="flex flex-col pt-4 space-y-5 text-2xl text-white">
-                        <NavbarItem route="shop" msg="Shop"/>
-                        <NavbarItem route="about" msg="About Us"/>
-                        <NavbarItem route="login" msg="Login"/>
+                        <NavbarItem
+                            route="shop"
+                            msg="Shop"
+                        />
+                        <NavbarItem
+                            route="about"
+                            msg="About Us"
+                        />
+                        <NavbarItem
+                            route="login"
+                            msg="Login"
+                        />
                     </div>
                 </div>
             </div>
